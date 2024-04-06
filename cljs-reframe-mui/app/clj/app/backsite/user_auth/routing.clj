@@ -17,4 +17,5 @@
   ["/user-auth"
    ["" {:get health-check}]
    ["/login" {:post (partial ctrl/login db)}]
-   ["/signup" {:post (partial ctrl/signup db)}]])
+   ["/signup" {:post (partial ctrl/signup db)}]
+   ["/silent-login" {:post (partial ctrl/login db)}]])

@@ -4,8 +4,6 @@
    ;; basic clojure setup and app management
    [org.clojure/clojure "1.11.1"]
    [com.stuartsierra/component "1.1.0"]
-   [prismatic/schema "1.4.1"]
-
    ;; basic web plumbing & web needs
    [org.immutant/web "2.1.10" :exclusions [commons-codec]]
    [clj-http "3.12.3"]
@@ -14,7 +12,7 @@
    [ring/ring-json "0.5.1"]
    [ring "1.9.6" :exclusions [commons-codec]]
    [ring-cors "0.1.13"]
-   [ring/ring-json "0.5.1"]
+
    [ring/ring-anti-forgery "1.3.0"]
    [metosin/reitit "0.6.0"]
    [selmer "1.12.56" :exclusions [commons-codec]]

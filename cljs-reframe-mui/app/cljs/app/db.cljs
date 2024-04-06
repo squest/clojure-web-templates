@@ -22,7 +22,27 @@
                        :id       (str (random-uuid))
                        :children [{:name     "marketing"
                                    :id       (str (random-uuid))
-                                   :children []}]}
+                                   :children [{:name     "Creative thinking"
+                                               :id       (str (random-uuid))
+                                               :children []}
+                                              {:name     "Critical thinking"
+                                               :id       (str (random-uuid))
+                                               :children [{:name     "Math skills"
+                                                           :id       (str (random-uuid))
+                                                           :children []}]}
+                                              {:name     "Problem solving"
+                                               :id       (str (random-uuid))
+                                               :children [{:name     "Creative thinking"
+                                                           :id       (str (random-uuid))
+                                                           :children []}
+                                                          {:name     "Critical thinking"
+                                                           :id       (str (random-uuid))
+                                                           :children [{:name     "Math skills"
+                                                                       :id       (str (random-uuid))
+                                                                       :children []}]}
+                                                          {:name     "Problem solving"
+                                                           :id       (str (random-uuid))
+                                                           :children []}]}]}]}
                       {:name     "Technology"
                        :id       (str (random-uuid))
                        :children [{:name     "Computer programming"

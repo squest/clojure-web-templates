@@ -1,11 +1,11 @@
 (ns app.utils
   (:require
-   [clj-uuid :as uuid]
-   [clojure.edn :as edn]
-   [clojure.string :as cs]
-   [clojure.pprint :refer [pprint]]
-   [java-time :as t]
-   [environ.core :refer [env]]))
+    [clj-uuid :as uuid]
+    [clojure.edn :as edn]
+    [clojure.string :as cs]
+    [clojure.pprint :refer [pprint]]
+    [java-time :as t]
+    [environ.core :refer [env]]))
 
 (defn now
   []
@@ -103,18 +103,10 @@
                          :server-port
                          :server-host
                          :db-mongo-quiet
-                         :db-mongo-name-1
+                         :db-mongo-name
                          :db-mongo-port
                          :db-mongo-debug
-                         :db-mongo-uri
-                         :db-admin-id
-                         :token
-                         :s3-cf-assets-url
-                         :s3-access-key
-                         :s3-secret-key
-                         :s3-bucket-region
-                         :s3-bucket-name
-                         :zenbrain-api]
+                         :db-mongo-uri]
         to-be-read-keys [:server-port
                          :db-mongo-quiet
                          :db-mongo-port

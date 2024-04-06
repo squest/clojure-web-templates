@@ -1,7 +1,8 @@
 (ns dev
   (:require [com.stuartsierra.component :as component]
             [app.system :as system]
-            [app.utils :refer :all]))
+            [app.utils :refer :all]
+            [clojure.tools.namespace.repl :as ns-repl]))
 
 (defonce dev-system (atom nil))
 
@@ -31,6 +32,7 @@
 (defn restart
   []
   (do (stop)
+      (ns-repl/refresh)
       (print "Restarting the system in 2 seconds... ")
       (Thread/sleep 100)
       (println "plus/minus 5 minutes.")

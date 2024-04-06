@@ -20,16 +20,12 @@
      :body    {:status  "error"
                :message "Failed to authenticate, please banget relogin and refresh!"}}))
 
-(defn token-request
-  "Checking the api"
-  [db request]
-  (info "=======================================================================")
-  (info "URI : " (:uri request))
+(defn api-check
+  [req]
   {:status  200
    :headers {"Content-Type" "application/json"}
-   :body    {:status           "ok"
-             :message          "API is working"
-             :bo-version-token (:bo-version-token db)}})
+   :body    {:status  "ok"
+             :message "Backsite API is working"}})
 
 (defn backsite-api
   "APIs specifically for backoffice needs"
@@ -38,7 +34,7 @@
    ["/v1"
     (user-auth/routes db)
     (users-mgt/routes db midware)
-    ["/health" {:get (partial token-request db)}]]])
+    ["/health" {:get api-check}]]])
 
 (defn create-routes
   "Creates the whole routes for the system"

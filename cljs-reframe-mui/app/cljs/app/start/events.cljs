@@ -12,11 +12,6 @@
                  [:nothing])}))
 
 (re/reg-event-fx
-  :start-event/silent-login
-  (fn [_ [_ cred]]
-    {:fx [(auth/silent-login cred)]}))
-
-(re/reg-event-fx
   :start-event/login
   (fn [_ [_ cred]]
     {:fx [(auth/login cred)]}))

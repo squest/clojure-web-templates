@@ -130,6 +130,18 @@
           :home [home-page]
           :content-management [view-content/content-management-page]
           :skill-management [view-skill/skill-management-page]
+          :user-management [view-user/user-management-page])]
+       [grid {:item true :xs 12}
+        (case @active-page
+          :home [home-page]
+          :content-management [view-content/content-management-page]
+          :skill-management [view-skill/skill-management-page]
+          :user-management [view-user/user-management-page])]
+       [grid {:item true :xs 12}
+        (case @active-page
+          :home [home-page]
+          :content-management [view-content/content-management-page]
+          :skill-management [view-skill/skill-management-page]
           :user-management [view-user/user-management-page])]]]
      [app-drawer]
      [app-footer]]))

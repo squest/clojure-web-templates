@@ -6,13 +6,13 @@
 (defn get-users [cred]
   (ajax/ajax-request
     {:method          :post
-     :uri             (str (:base-url db/default-db) "/backsite-api/v1/user/get-users")
+     :uri             (str (:base-url db/default-db) "/backsite-api/v1/users/get-users")
      :format          (ajax/json-request-format)
      :response-format (ajax/json-response-format {:keywords? true})
      :params          {:cred cred}
      :handler         (fn [[status data]]
                         (if status
-                          (re/dispatch [:user-event/set-users (:users data)])
+                          (re/dispatch [:user-event/set-users (:users-data data)])
                           (js/alert (get-in data [:response :message]))))
      :error-handler   (fn [error]
                         (do (js/alert "Dude, you're not authorise (yet)")
@@ -21,7 +21,7 @@
 (defn update-user [cred user-data]
   (ajax/ajax-request
     {:method          :post
-     :uri             (str (:base-url db/default-db) "/backsite-api/v1/user/update-user")
+     :uri             (str (:base-url db/default-db) "/backsite-api/v1/users/update-user")
      :mode            :no-cors
      :format          (ajax/json-request-format)
      :response-format (ajax/json-response-format {:keywords? true})

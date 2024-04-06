@@ -5,7 +5,7 @@
 (defn get-users-logic
   [db]
   (info "Getting into get-users-logic")
-  (mc/find-maps (:db-1 db) "users" {} [:_id :username :name :role :approved]))
+  (mc/find-maps (:db db) "users" {} [:_id :username :name :role :approved]))
 
 (defn get-users
   "Get all users in the db, but only for selected keys"
@@ -26,9 +26,9 @@
   (info "Getting into update-user handler")
   (let [user-data (get-in req [:body :user-data])
         user-id (get-in user-data [:_id])
-        db-user-data (mc/find-map-by-id (:db-1 db) "users" user-id)]
+        db-user-data (mc/find-map-by-id (:db db) "users" user-id)]
     (if (->> (merge db-user-data user-data)
-             (mc/update-by-id (:db-1 db) "users" user-id))
+             (mc/update-by-id (:db db) "users" user-id))
       {:body {:status     "ok"
               :message    "User updated"
               :users-data (get-users-logic db)}}
