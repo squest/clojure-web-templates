@@ -14,3 +14,7 @@ pom.xml.asc
 .cpcache/
 /min-compojure/app/.idea
 *app.iml
+/cljs-reframe-mui/app/.idea
+/cljs-reframe-mui/.DS_Store
+*.DS_Store
+*.idea
