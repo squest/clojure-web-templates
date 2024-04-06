@@ -6,18 +6,18 @@ Main libraries:
 1. Compojure
 2. Ring-defaults to provide basic middleware
 3. Immutant web server
-4. Can server JSON or HTML (Using selmer)
+4. some other ring utilities to send JSON or HTML (Using selmer)
 
 Supporting libraries => mostly to serve app.utils (sets of utility functions)
-1. Environ for reading environment variables
-2. Cheshire to read-write json-edn
-3. Selmer for html templating
-4. clj-uuid for generating uuid
-5. java-time for timing
+1. Cheshire to read-write json-edn
+2. Selmer for html templating
+3. clj-uuid for generating uuid
+4. java-time for timing
 
 ## Usage
 
-Lein repl => going into app.core ns (in-ns 'app.core) => (start)
+Lein repl => (start)
+Available routes can be checked in app.handler
 
 ## License
 
