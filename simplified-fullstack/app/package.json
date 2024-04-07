@@ -1,0 +1,23 @@
+{
+	"name": "app",
+	"scripts": {
+		"ancient": "clojure -Sdeps '{:deps {com.github.liquidz/antq {:mvn/version \"RELEASE\"}}}' -m antq.core",
+		"watch": "npx shadow-cljs watch app browser-test karma-test",
+		"release": "npx shadow-cljs release app",
+		"build-report": "npx shadow-cljs run shadow.cljs.build-report app target/build-report.html"
+	},
+	"dependencies": {
+		"@emotion/react": "11.11.1",
+		"@emotion/styled": "11.11.0",
+		"@mui/icons-material": "^5.14.9",
+		"@mui/lab": "^5.0.0-alpha.142",
+		"@mui/material": "5.11.12",
+		"highlight.js": "11.5.1",
+		"react": "17.0.2",
+		"react-beautiful-dnd": "^13.1.1",
+		"react-dom": "^17.0.2"
+	},
+	"devDependencies": {
+		"shadow-cljs": "2.20.5"
+	}
+}
