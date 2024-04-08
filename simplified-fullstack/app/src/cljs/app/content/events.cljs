@@ -1,1 +1,0 @@
-(ns app.content.events)
